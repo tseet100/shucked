@@ -1,0 +1,43 @@
+<h3>Add Oysters</h3>
+<div class='row'>
+    <form action="/posts" method="POST" class="col s12">
+        <div class='row'>
+            <div class="input-field">
+                <input type="text" id='restaurant' name='restaurant'>
+                <label for="restaurant">Restaurant</label>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="input-field">
+                <input type="text" id='oyster' name='oyster'>
+                <label for="oyster">Oyster</label>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="input-field">
+                <select id='size' name='size'>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label for="size"></label>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="input-field">
+                <input type="text" id='drink' name='drink'>
+                <label for="drink">Drink</label>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="input-field">
+                <h5>Comments:</h5>
+                <textarea id='comments' name='comments'></textarea>
+            </div>
+        </div>
+        <div class='row'>
+            <input type="submit" value="Save" class='btn'>
+            <a href='/dashboard' class='btn-red'>Cancel</a>
+        </div>
+    </form>
+</div>

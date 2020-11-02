@@ -1,1 +1,26 @@
-<h1>Dashboard</h1>
+<h3>Welcome {{name}}</h3>
+<p>Your Oysters</p>
+{{#if posts}}
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Restaurant</th>
+            <th>Oysters</th>
+            <th>Drinks</th>
+            <th>Title</th>
+            <th>Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each posts}}
+        <tr>
+            <td><a href='/posts/{{_id}}'>{{restaurant}}</a></td>
+            <td>{{oyster}}</td>
+            <td></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<p>You don't have any oysters</p>
+{{/if}}
