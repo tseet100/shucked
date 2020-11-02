@@ -1,5 +1,6 @@
-# Getting Started with Create React App
+# Shucked
 
+An app for oyster lovers to track their favorite oysters.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
