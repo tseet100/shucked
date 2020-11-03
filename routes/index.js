@@ -13,8 +13,7 @@ router.get('/', ensureGuest, (req, res) => {
 //dashboard :: GET
 router.get('/dashboard', ensureAuth, async (req, res) => {
   try {
-    const posts = await Post.find().lean();
-    console.log('HERERERERE', posts);
+    const posts = await Post.find({user: req.body.user}).lean();
     res.render('dashboard', {
       name: req.user.firstName,
       posts,

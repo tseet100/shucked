@@ -15,6 +15,9 @@ const PostSchema = new mongoose.Schema({
     required: true,
     enum: ['small', 'medium', 'large'],
   },
+  price: {
+    type: Number,
+  },
   drink: {
     type: String,
   },

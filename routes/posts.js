@@ -8,6 +8,22 @@ router.get('/add', ensureAuth, (req, res) => {
   res.render('posts/add');
 });
 
+// GET all posts
+router.get('/', ensureAuth, async (req, res) => {
+  try {
+    const posts = await Post.find()
+      .populate('user')
+      .sort({createdAt: 'desc'})
+      .lean();
+    res.render('posts/index', {
+      posts,
+    });
+  } catch (err) {
+    console.error(err);
+    res.render('error/500');
+  }
+});
+
 // POST new posts
 router.post('/', ensureAuth, async (req, res) => {
   try {
